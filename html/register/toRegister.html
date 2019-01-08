@@ -1,209 +1,220 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>万魔声学-注册</title>
-    <link href="css/index.css" rel="stylesheet" type="text/css" />
-    <link href="css/login.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
-    <script type="text/javascript" src="js/register/reg.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>万魔声学-注册</title>
+<link href="https://static0.1more.com/s/css/index.css" rel="stylesheet" type="text/css" />
+<link href="https://static0.1more.com/s/css/login.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../js/lib/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="../../js/lib/Validform_v5.1_min.js?v=20181231"></script>
+<script type="text/javascript" src="../../js/lib/js/jquery.form.js"></script>
+<script type="text/javascript" src="../../js/tools/base.js"></script>
+<script type="text/javascript" src="../../js/common/header.js"></script>
+<script type="text/javascript" src="../../js/cart.js"></script>
+<script type="text/javascript" src="../../js/index/top.js"></script>
+<script type="text/javascript" src="../../js/index/register.js"></script>
+<script type="text/javascript" src="../../js/index/top.js"></script>
+<script type="text/javascript" src="../../js/tools/yanzheng.js"></script>
 </head>
 <style>
-    .loginBtn {
-        width:367px; height:55px; background:#F63B21;
-        text-align:center; line-height:55px;
-        font-size:18px; color:#fff; outline:none;border:none;
-        cursor:pointer;font-family:'Microsoft Yahei';
-    }
-    <!-- #yzcode a{font-size:13px;}
-    #sencondDown strong{font-size:13px;} -->
+.loginBtn {
+  width:367px; height:55px; background:#F63B21;
+  text-align:center; line-height:55px;
+  font-size:18px; color:#fff; outline:none;border:none;
+  cursor:pointer;font-family:'Microsoft Yahei';
+ }
 </style>
 <body>
+<!-- 购物车/个人中心/登录/注册/修改密码/ 等用到的 黑色长条头部或图片头部 -->
 <section>
-    <div class="topjob1">
-        <div class="xbtbs">
+    <div class="topjob1">    		
+       <div class="xbtbs">
             <div class="xbtb">
                 <div class="xbtb1">
-                    <a href="/index.html">
-                        <img src="images/logo.png"/>
+                    <a href="../../index.html">
+                        <img src="../../images/logo.png" />
                     </a>
+                    <h1 style="display: none;">1more耳机-万魔声学</h1>
                 </div>
                 <div class="xbtb1_0">
-                    <div class="xbtb1_1">
-                        <ul>
-                            <li><a href="/index.html">首页</a></li>
-                            <li><a href="/product/listIndex">产品 </a></li>
-                            <li><a href="/news/newIndex">资讯 </a></li>
-                            <li><a href="/linkageIndex/inkIndex">体验店</a></li>
-                            <li><a href="/service/serviceIndex">服务</a></li>
-                            <li><a href="http://bbs.1more.com/index.html">社区</a></li>
-                        </ul>
-                    </div>
-                 <div class="xbtb1_5"></div>
+                        <div class="xbtb1_1">
+                       <ul>
+                           <li><a href="../../index.html">首页</a></li>
+                           <li><a href="../product/listIndex.html">产品</a></li>
+                           <li><a href="../news/list.html">资讯</a></li>
+                           <li><a href="##">体验店</a></li>
+                           <li><a href="../service/serviceIndex.html">服务</a></li>
+                           <li><a href="##">社区</a></li>
+                       </ul>
+                   </div>                 
+                   <div class="xbtb1_2" id="islogin">
+                       <div class="xbtb1_3">
+                           <a href="../login/login.html">登录</a>
+                       </div>
+                       <div class="xbtb1_4">
+                           <a href="../register/toRegister.html">注册</a>
+                       </div>
+                   </div>
+                   <div class="xbtb1_5">
+                       <a href="../cart/cart.html">购物车</a>
+                       <a href="../cart/cart.html" class="hover" style="color: #ff3a1f;" id="shopNum"></a>
+                   </div>
                 </div>
             </div>
         </div>
-    </div>  
-</section>
-
-<div class="content_register">
-    <div class="content_register1">
-        <form action="register.php" method="post" id="form1" class="registerform"">
+    </div>
+</section><div class="content_register">
+  <div class="content_register1">
+ 	    <form action="../../php/" method="post" id="form1" class="registerform" onsubmit="return zhuche()">
             <div class="content_register3">
-                <input id="strLoginName" maxlength="12" type="text" placeholder="用户名" />
+                <input id="strLoginName" name="strLoginName" maxlength="12" type="text" placeholder="用户名" onkeyup="checkUserName(this)" />
                 <span id="userspan">用户名至少6个字符,最多12个字符</span>
             </div>
+            
             <div class="content_register3">
-                <input id="strMobilePhone" maxlength="11" type="text" placeholder="手机号码"/>
+                <input id="strMobilePhone" maxlength="11" name="strMobilePhone" type="text" placeholder="手机号码" onkeyup="checkPhone(this)"/>
                 <span id="phonespan">手机号长度为11个字符</span>
             </div>
             <div class="content_register3">
-                <input id="userpwd" type="password" maxlength="16" minlength="6" placeholder="密码"/>
+                <input id="userpwd" name="userpwd" type="password" maxlength="16" minlength="6" placeholder="密码" onkeyup="ckPwd1(this)"/>
                 <span id="passwordspan"> 长度为6-16个字符，区分大小写</span>
             </div>
             <div class="content_register3">
-                <input id="userrpwd" name="userrpwd" type="password" maxlength="16" minlength="6" placeholder="确认密码"/>
+                <input id="userrpwd" name="userrpwd" type="password" maxlength="16" minlength="6" placeholder="确认密码" onkeyup="ckPwd2(this)"/>
                 <span id="passwordspan2"> 长度为6-16个字符，区分大小写</span>
             </div>
-            <div class="content_register3">
-                <input name="strCode" id="strCode" type="text"  maxlength="6"  style="width:68%" placeholder="验证码"/>
-                <a href="#" class="exchange" onclick="refreshImage(document.getElementById('validateimg'));return false;">
-                </a><br/>
-                <span id="codespan"><!--  请输入您的验证码 --></span>
+            <div class="content_register3">	           	
+            <input name="strCode" id="strCode" type="text"  maxlength="6"  style="width:68%" placeholder="验证码"/>      
+            <a href="#" class="exchange" onclick="refreshImage(document.getElementById('validateimg'));return false;">
+                <img height="26" width="66" id="validateimg" onclick="refreshImage(this);return false;" src="" title="看不清楚?请点击刷新验证码" />
+            </a><br/>  
+            <span id="codespan"><!--  请输入您的验证码 --></span>
             </div>
-            <div class="content_register4">
-                <input name="" type="button" value="注&nbsp;册" class="loginBtn" id="submitbutton"/>
-            </div>
-            <span id="checkButton"></span>
+	        <div class="content_register4">
+	           <input name="" type="button" value="注&nbsp;册" class="loginBtn" id="submitbutton"  onclick="saveUser()"/>
+	        </div>
+	        <span id="checkButton"></span>
             <input type="hidden" id="callback" name="callback" value="" />
             <input type="hidden" id="isLogin" name="isLogin" value="" />
             <input type="hidden" id="uuid" name = "uuid" value="a4a9ed7fd5f14d7992650f556e7340e5" />
-            <input type="hidden" id="reg_token" name = "reg_token" value="VRocyGX8HFRGZJBh5WVL" />
-        </form>
-        <script type="text/javascript">
-            $(function(){			
-                $("#submitbutton").click(function(){
-                    //1、
-                    $.post(
-                        "register.php",
-                        {
-                            "vipId":$("#strLoginName").val(),
-                            "vipPsw":$("#userpwd").val(),
-                            "phoneNum":$("#strMobilePhone").val()
-                        },
-                        function(data){					
-                            
-                        }
-                    );
-                });
-                console.log("提交成功");
-            });
-        </script>
-        <div class="content_register5">
+            <input type="hidden" id="reg_token" name = "reg_token" value="5ovC5Hdw8fQuCY36CHVX" />
+	        <div class="content_register23">
+                   点击“注册”，即表示您同意并愿意遵守1MORE <a href="userAgreement.html" target="_blank">用户协议</a><!-- 和 <a href="/register/privacyPolicy.html" target="_blank">隐私政策</a>-->
+            </div>
+	   </form>
+	  
+       <div class="content_register5">
             <div class="content_register5_1">
-                <a href="/login/index.html">立即登录</a>
+            <a href="../../html/login/login.html">立即登录</a>
             </div>
-            <div class="content_register5_2">
-                已有1More帐号？
+              <div class="content_register5_2">
+          		 已有1More帐号？
             </div>
-        </div>
-    </div>
-</div>
-
-
+       </div>
+   </div>  
+  </div>
+<link href="../../css/site_selection.css" rel="stylesheet" type="text/css" />
 <footer>
-    <style>
-        .foot2s_1{width:150px; float:left; position:absolute; top:0px; left:100px; display:none;}
-        .foot2s_1 img{width:130%; height:130%;}
-
-        .bottom {text-align:center;padding-bottom:10px;}
-        .bottom a:link, .bottom a:visited { color:#434343;}
-        .bottom a:hover { color:#ff3a1e;}
-    </style>
-    <div class="foot">
-        <div class="foot2">
-            <div class="foot2_1">
-                <a  href="javascript:;"> <img src="https://static0.1more.com/s/images/homex_2_04.jpg" /></a>
+        <footer>
+        <div class="foot">
+           <div class="foot2">
+                <div class="foot2_1">
+                    <a href="javascript:;">
+                        <img src="images/homex_2_04.jpg" alt="">
+                    </a>
+                </div>
+                <div class="foot2s_1" style="display: none"></div>
+                <div class="foot3t">
+                    <div class="foot3">
+                        <ul>
+                            <li>
+                                <div class="foot3_1">产品中心</div>
+                                <div class="foot3_2">
+                                    <ul>
+                                        <li><a href="javascript:;">声学</a></li>
+                                        <li><a href="javascript:;">智玩</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="foot3_1">资讯中心</div>
+                                <div class="foot3_2">
+                                    <ul>
+                                        <li><a href="javascript:;">公司新闻</a></li>
+                                        <li><a href="javascript:;">行业新闻</a></li>
+                                        <li><a href="javascript:;">精彩视频</a></li>
+                                        <li><a href="javascript:;">技术分享</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="foot3_1">关于我们</div>
+                                <div class="foot3_2">
+                                    <ul>
+                                        <li><a href="javascript:;">关于1MORE</a></li>
+                                        <li><a href="javascript:;">加入我们</a></li>
+                                        <li><a href="javascript:;">联系我们</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="foot3_1">联系我们</div>
+                                <div class="foot3_2">
+                                    <ul>
+                                        <li><a href="http://weibo.com/xrepublic" target="_blank" rel="nofollow">新浪微博</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="foot4">
+                        <div class="foot4_1">客服热线</div>
+                        <div class="foot4_2" style="text-align:left; padding-left:30px; margin-top:10px; font-size:15px;">
+                            400-992-0909
+                        </div>
+                        <div class="foot4_2" style="text-align:left; padding-left:30px; font-size:15px;">
+                            0755-86574095
+                        </div>
+                        <div class="foot4_3">
+                            <a href="##">在线客服</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="foot2s_1">
-                <img src="https://static0.1more.com/s/images/icon_new1more.png" />
-            </div>
-            <div class="foot3t">
-                <div class="foot3">
-                    <ul>
-                        <li>
-                            <div class="foot3_1"></div>
-                            <div class="foot3_2">
-                                <ul>
-                                    <li><a href="/product/list-2.html">声学</a></li>
-                                    <li><a href="/product/list-5.html">智玩</a></li>
-                                </ul>
-                            </div>
+            <div class="bottom" style="text-align: center; padding-bottom: 10px; width: 390px; margin: 0 auto; margin-bottom: 10px; height: 40px;">
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="width: 130px; text-align: center; float:left;">
+                            <span style="margin-bottom: 10px;">
+                                <a href="https://1more.tmall.com" target="_blank" rel="nofollow">
+                                    <img src="../../images/tmall.jpg">
+                                </a>
+                            </span>
+                            <span style="margin-right:10px; line-height: 24px;">
+                                <a href="https://1more.tmall.com" target="_blank" rel="nofollow">1MORE天猫旗舰店</a>
+                            </span> 
                         </li>
-                        <li>
-                            <div class="foot3_1"></div>
-                            <div class="foot3_2">
-                                <ul>
-                                    <li><a href="/news/index.html">公司新闻</a></li>
-                                    <li><a href="/news/index.html">行业新闻</a></li>
-                                    <li><a href="/news/index.html">精彩视频</a></li>
-                                    <li><a href="/share/index.html">技术分享</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="foot3_1"></div>
-                            <div class="foot3_2">
-                                <ul>
-                                    <li><a href="/about/index.html">关于1MORE</a></li>
-                                    <li><a href="/job/index.html">加入我们</a></li>
-                                    <li><a href="/contactus.html">联系我们</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="foot3_1">关注我们</div>
-                            <div class="foot3_2">
-                                <ul>
-                                    <li><a href="http://weibo.com/xrepublic" target="_blank" rel="nofollow">新浪微博</a></li>
-                                </ul>
-                            </div>
+                        <li style="width: 130px; text-align: center; float:left;">
+                            <span style="margin-bottom: 10px;">
+                                <a href="http://onemoreerji.jd.com/" target="_blank" rel="nofollow">
+                                    <img src="../../images/jd.jpg">
+                                </a>
+                            </span>
+                            <span style="margin-left:10px; line-height: 24px;">
+                                <a href="http://onemoreerji.jd.com/" target="_blank" rel="nofollow">1MORE京东旗舰店
+                                </a>
+                            </span>
                         </li>
                     </ul>
                 </div>
-                <div class="foot4">
-                    <div class="foot4_1">客服热线</div>
-                    <div class="foot4_2" style="text-align:left; padding-left:30px; margin-top:10px; font-size:15px;">
-                        400-992-0909
-                    </div>
-                    <div class="foot4_2" style="text-align:left; padding-left:30px; font-size:15px;">
-                        0755-86574095
-                    </div>
-                    <div class="foot4_3">
-                        <a href="javascript:void(0)" onClick="javascript:window.open('https://vs.rainbowred.com/visitor/pc/chat.html?companyId=499','','width=854,height=600')" style="cursor:hand">在线客服</a>
-                    </div>
+            <div class="foot5">
+                <div class="foot5_1">
+                    ©2013-2019 万魔声学科技有限公司 版权所有
+                    <a href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow">粤ICP备13074094号-1</a>
+                    <p>万魔声学科技有限公司对本网站所有图片与资料拥有所有权,如未经允许盗链或下载使用,必追究相关法律责任 </p>
                 </div>
             </div>
         </div>
-        <div class="bottom" style="text-align: center; padding-bottom: 10px; width: 390px; margin: 0 auto; margin-bottom: 10px; height: 40px;">
-            <ul style="list-style: none; padding: 0; margin: 0;">
-                <li style="width: 130px; text-align: center; float:left;">
-                    <span style="margin-bottom: 10px;"><a href="https://1more.tmall.com" target="_blank" rel="nofollow"><img src="https://static0.1more.com/s/images/tmall.jpg"></a></span>
-                    <span style="margin-right:10px; line-height: 24px;"><a href="https://1more.tmall.com" target="_blank" rel="nofollow">1MORE天猫旗舰店</a></span>
-                </li>
-                <li style="width: 130px; text-align: center; float:left;">
-                    <span style="margin-bottom: 10px;"><a href="http://onemoreerji.jd.com/" target="_blank" rel="nofollow"><img src="https://static0.1more.com/s/images/jd.jpg"></a></span>
-                    <span style="margin-left:10px; line-height: 24px;"><a href="http://onemoreerji.jd.com/" target="_blank" rel="nofollow">1MORE京东旗舰店</a></span>
-                </li>
-            </ul>
-        </div>
-        <div class="foot5" style="clear: both;">
-            <div class="foot5_1">
-                ©2013-2019 万魔声学科技有限公司 版权所有 <a href="http://www.miitbeian.gov.cn" target="_blank" rel="nofollow">粤ICP备13074094号-1</a>
-                <p>万魔声学科技有限公司对本网站所有图片与资料拥有所有权,如未经允许盗链或下载使用,必追究相关法律责任 </p>
-            </div>
-        </div>
-    </div>
-</footer>
+   </footer>
+<script src="../../js/register/reg.js"></script>
 </body>
 </html>

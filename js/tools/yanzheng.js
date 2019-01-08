@@ -81,20 +81,6 @@ function zhuche() {
     var str_pass1 = window.document.getElementById("userrpwd").value;
     var yzcode = window.document.getElementById("strCode").value;
 
-    // var strLoginName = window.document.getElementById("strLoginName").value;
-    // if (rtrim(strLoginName) == "") {
-    //  jBox.tip("请输入您的用户名!");
-    //  $("#strLoginName").focus();
-    //  return false;
-    // }
-    //  var len = jmz.GetLength(rtrim(strLoginName));
-    // if(len < 6 || len > 12){
-    //	jBox.tip("用户名至少6个字符,最多12个字符!");
-    //   $("#strLoginName").focus();
-    //   return false;
-    //  }
-
-
     if (rtrim(str_phone) == "") {
         jBox.tip("请输入您的手机!");
         $("#strMobilePhone").focus();
@@ -142,7 +128,6 @@ function zhuche() {
     }
     return true;
 }
-
 
 function wjpass() {
 

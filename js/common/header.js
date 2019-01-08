@@ -4,26 +4,26 @@ $(document).ready(function () {
     if(callback==null){
         callback = url;
     }
-    if(callback == "http://www.1more.com/login/index.html" || callback == "http://www.1more.com/register/toRegister.html"){
-        callback = "http://www.1more.com/index.html";
+    if(callback == "../../html/login/login.html" || callback == "../../html/register/toRegister.html"){
+        callback = "../../index.html";
     }
 
-    $.get("/getlogin.html?callBack="+callback, {
-        iddd: Math.random()
-    },function(data) {
+    // $.get("/getlogin.html?callBack="+callback, {
+    //     iddd: Math.random()
+    // },function(data) {
 
-        if($(".xbtb1_2").length > 0){
-            $(".xbtb1_2").remove();
-        }
+    //     if($(".xbtb1_2").length > 0){
+    //         $(".xbtb1_2").remove();
+    //     }
 
-        $(".xbtb1_1").after(data);
+    //     $(".xbtb1_1").after(data);
 
-        $(".top1_8").hover(function () {
-            $(".top1_17").show();
-        }, function () {
-            $(".top1_17").hide();
-        });
-    });
+    //     $(".top1_8").hover(function () {
+    //         $(".top1_17").show();
+    //     }, function () {
+    //         $(".top1_17").hide();
+    //     });
+    // });
 
 });
 
