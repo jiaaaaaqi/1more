@@ -1,6 +1,5 @@
 html,body,applet, object, iframe, h1, h2, h3, h4, h5, h6, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td{ margin:0; padding:0; font-size:12px; color:#444;  font-family:Microsoft Yahei;}
 
-
 .clea {
 	clear:both;
 }
@@ -8,10 +7,7 @@ a {
 	text-decoration:none;
 	color:#000;
 	font-size:12px; 
-	/*transition: all 0.5s;
--moz-transition: all 0.5s;	/* Firefox 4 */
--webkit-transition: all 0.5s;	/* Safari ºÍ Chrome */
--o-transition: all 0.5s;	/* Opera */
+   transition: all 0.5s;	/* Safari ºÍ Chrome */
 }
 
 /**°´Å¥ÑùÊ½**/
@@ -35,39 +31,6 @@ body{ margin:0; padding:0; width:100%;background-color:#e6e6e6 ; min-width:400px
 .topjob1{ position:relative;width: auto;height: auto;padding: 0px;background: none repeat scroll 0% 0% #232323;}
 .top{ width:auto; height:auto; padding:0;position:relative; background-color:#2A2A2F;}
 .tops{ width:auto; padding:0; }
-#banner{ width:100%;}
-#banner ul{ width:100%;}
-#banner ul li{ width:100%; height:auto;position:absolute; list-style-type:none;}
-#banner ul li.index_banner1{background:url(../images/index_banner/banner1.jpg)  no-repeat center}
-#banner ul li.index_banner2{background:url(../images/index_banner/banner2.jpg)  no-repeat center}
-#banner ul li a{ width:100%; height:auto; display:block;}
-  @media screen and (max-width: 1920px) {
-     #banner ul li.index_banner1{ height:auto;background:url(../images/index_banner/banner1_1920.jpg)  no-repeat center}
-     #banner ul li.index_banner1 a{height:auto;}
-     #banner ul li.index_banner2{ height:auto;background:url(../images/index_banner/banner2_1920.jpg)  no-repeat center}
-     #banner ul li.index_banner2 a{height:auto;}
-  }
-  @media screen and (max-width: 1680px) {
-     #banner ul li.index_banner1{ height:auto;background:url(../images/index_banner/banner1_1680.jpg)  no-repeat center}
-     #banner ul li.index_banner1 a{height:auto;}
-     #banner ul li.index_banner2{ height:auto;background:url(../images/index_banner/banner2_1680.jpg)  no-repeat center}
-     #banner ul li.index_banner2 a{height:auto;}
-  }
-  @media screen and (max-width: 1440px) {
-     #banner ul li.index_banner1{ height:auto;background:url(../images/index_banner/banner1_1440.jpg)  no-repeat center}
-     #banner ul li.index_banner1 a{height:auto;}
-     #banner ul li.index_banner2{ height:auto;background:url(../images/index_banner/banner2_1440.jpg)  no-repeat center}
-     #banner ul li.index_banner2 a{height:auto;}
-  }
-  @media screen and (max-width: 1360px) {
-     #banner ul li.index_banner1{ height:auto;background:url(../images/index_banner/banner1_1360.jpg)  no-repeat center}
-     #banner ul li.index_banner1 a{height:auto;}
-     #banner ul li.index_banner2{ height:auto;background:url(../images/index_banner/banner2_1360.jpg)  no-repeat center}
-     #banner ul li.index_banner2 a{height:auto;}
-  }
-#bannerbar{  margin:0 auto;}
-#bannerbar a{display:inline-block;zoom:1;*display:inline;vertical-align:top;position:relative;width:12px;height:12px;overflow:hidden;margin:0px 5px;letter-spacing:normal; background:url(../images/bannera.png) no-repeat; }
-#bannerbar a.barh{ background:url(../images/bannerah.png) !important;}
 
 
 .logo{ position:absolute; top:10px; left:23px;}
@@ -154,6 +117,17 @@ body{ margin:0; padding:0; width:100%;background-color:#e6e6e6 ; min-width:400px
 .content_index ul li a:hover{filter:Alpha(opacity=80); -moz-opacity:0.8;opacity: 0.8;}
 .content_index ul li img{width:100%; height:auto}
 
+#container { width: 100%; height:auto; overflow: hidden; position: relative; background: rgba(0,0,0, 1.0);display: block;}
+#list { width: 100%; position: absolute; z-index: 1;}
+#list img { float: left;width: 100%;}
+#buttons { position: absolute; height: 10px; width: 100px; z-index: 2; bottom: 20px; left: 250px;}
+#buttons span { cursor: pointer; float: left; border: 1px solid #fff; width: 10px; height: 10px; border-radius: 50%; background: #333; margin-right: 5px;}
+#buttons .on {  background: orangered;}
+.arrow { cursor: pointer; display: none; line-height: 39px; text-align: center; font-size: 36px; font-weight: bold; width: 40px; height: 40px;  position: absolute; z-index: 2; top: 400px; background-color: RGBA(0,0,0,.3); color: #fff;}
+.arrow:hover { background-color: RGBA(0,0,0,.7);}
+#container:hover .arrow { display: block;}
+#prev { left: 20px;}
+#next { right: 20px;}
  
  
 .foot{ margin:0;  padding:0; background:#e8e8e8;}
@@ -166,7 +140,6 @@ body{ margin:0; padding:0; width:100%;background-color:#e6e6e6 ; min-width:400px
 .foot3 ul{ margin:0;  padding:0;}
 .foot3 ul li{margin:0; padding:0; list-style-type:none; float:left; width:23%;text-align: center;}
 .foot3_1{ font-size:16px; color:#1b1b1b; height:35px;}
-.foot3_2{}
 .foot3_2 ul{ margin:0;  padding:0;}
 .foot3_2 ul li{margin:0; padding:0; list-style-type:none; float:left ; width:100%;  height:28px;}
 .foot3_2 ul li a{ color:#434343; font-size:12px;}
@@ -190,7 +163,6 @@ body{ margin:0; padding:0; width:100%;background-color:#e6e6e6 ; min-width:400px
     left:0px;
     z-index:-999; 
     }
-.dww101{ min-height:680px;_height:expression((document.documentElement.clientHeight||document.body.clientHeight)>680?"680px":"");}
 
 /******·ÖÒ³*****/
 .pr2_12{padding: 20px 0 20px 0; height:40px;}
@@ -225,7 +197,6 @@ body{ margin:0; padding:0; width:100%;background-color:#e6e6e6 ; min-width:400px
  
 /******ÔÝÎÞ¼ÇÂ¼*****/
 .nolist{ margin:50px 0 0 0; color:#777; text-align:center; font-size:16px;}
-.nolist span{}
 .nolist span a{font-size:14px; color:#4E4E4E;} 
 /******ÔÝÎÞ¼ÇÂ¼ end*****/
 
@@ -236,8 +207,8 @@ body{ margin:0; padding:0; width:100%;background-color:#e6e6e6 ; min-width:400px
 
 
 /********ÐÂÍ·²¿*******/
-.xbtbs{width:100%; height:80px; background: url(../images/xbtb_02.jpg) repeat-x;}
-.new-header{width:100%; height:80px; background: url(../images/xbtb_02.jpg) repeat-x;}
+.xbtbs{width:100%; height:80px; background: url(../images/navbg.jpg) repeat-x;}
+.new-header{width:100%; height:80px; background: url(../images/navbg.jpg) repeat-x;}
 .xbtb{ width:1200px; height:80px; margin:0 auto; padding:0;}
 .xbtb1{ width:215px;  height:52px; margin:0; padding:14px 0 0 0; float:left;}
 .xbtb1_0{ width:760px; height:35px; margin:0; padding:20px 5% 0 0; float:right;}
@@ -280,10 +251,6 @@ body{ margin:0; padding:0; width:100%;background-color:#e6e6e6 ; min-width:400px
 	margin-top:0px;
 	/*position:fixed!important;  FF IE7*/
 	position:absolute;/*IE6*/
-	_top: expression(eval(document.compatMode &&
-		 document.compatMode=='CSS1Compat') ?
-		 documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2 :/*IE6*/
-		 document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);/*IE5 IE5.5*/
 }
 
 .logo3{display:none;}
