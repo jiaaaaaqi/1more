@@ -1,0 +1,63 @@
+
+.news1{ width:auto; height:90px; margin:0; padding:0; border-bottom:solid 1px #fafafa;}
+.content_job{height:auto; overflow:hidden; background:#fff;}
+.content_job1{height:auto;padding:20px 0 30px 0;overflow:hidden;}
+.news1_1{ width:450px; height:60px; margin:0 auto; padding:25px 0 0 0;}
+.news1_1 ul{ margin:0; padding:0;}
+.news1_1 ul li{ width:150px; height:60px; margin:0; padding:0; float:left; list-style-type:none; text-align:center; line-height:26px;}
+.news1_1 ul li a{ font-size:16px; color:#292929; }
+.news1_1 ul li a:hover{ color:#ff3a1e;}
+.news1_1 ul li .hover{ color:#ff3a1e;}
+.news2{ width:1140px; height:auto; margin:0 auto; padding:0;}
+.news2 ul{ margin:0; padding:0;}
+.news2 ul li{ width:1140px; height:400px; margin:34px 0 0 0; padding:0; border-bottom:solid 1px #fafafa ; list-style-type:none;}
+.news2_1{ width:554px; height:365px; margin:0; padding:0; float:left;}
+.news2_2{ width:540px; height:365px; margin:0; padding:0; float:right;}
+.news2_3{ width:540px; height:auto; margin:0; padding:0; font-size:24px; color:#292929; line-height:40px;}
+.news2_3 a{ font-size:24px; color:#292929;}
+.news2_3 a:hover{ color:#ff3a1e;}
+.news2_3_1{ width:540px; height:25px; margin:4px 0 0 0; padding:0; font-size:12px; color:#999;}
+.news2_3_2{ width:auto; height:20px; margin:0; padding:0 10px 0 0; float:left;}
+.news2_3_3{ width:auto; height:20px; margin:0; padding:0 10px 0 0; float:left;}
+
+.news2_4{ width:540px; height:210px; margin:25px 0 0 0; padding:0; font-size:14px; color:#707070; line-height:26px;}
+.news2_5{ width:540px; height:30px; margin:0; padding:0; }
+.news2_7{ width:auto; height:20px; margin:0; line-height:22px; padding:0 10px 0 0; float:left;}
+.news2_7 a{ color:#343434; font-size:12px;}
+.news2_7 a:hover{ color:#ff3a1e;}
+.news2_6{ width:19px; height:19px; margin:0; padding:0; float:left;}
+.news3_0{ width:1140px; height:auto; margin:0 auto; padding:0;}
+.news3{ width:720px; text-align:center;  margin:0 auto; padding:20px 0 20px 0; font-size:30px;color:#222; border-bottom:solid 1px #fafafa;}
+.news3_1{ width:1140px; height:20px; margin:10px 0 0 0; padding:0; font-size:12px; color:#999; text-align:center;}
+.news3_2{ width:1140px; height:auto; margin:50px 0 0 0; padding:0; font-size:14px; color:#444; line-height:22px;}
+.news3_2_1{ text-align:center;}
+.news3_2_2{ width:720px;margin: 0 auto;}
+.news3_3{ width:110px; height:50px; margin:0 auto; padding:10px 0 0 0; }
+.news3_7{ width:auto; height:20px; margin:0; line-height:22px; padding:0; float:left;}
+.news3_7 a{ color:#343434; font-size:12px;}
+.news3_7 a:hover{ color:#ff3a1e;}
+.news3_6{ width:19px; height:19px; margin:0; padding:0 10px 0 0; float:left;}
+.news4{ width:1122px; height:auto; margin:50px auto 0; padding:0; overflow:hidden;}
+.news4 ul{ margin:0; padding:0;}
+.news4 ul li{ width:351px; height:258px; margin:0; padding:0 11px 0 11px; float:left; list-style-type:none;  position:relative; }
+.news4_1{ width:75px; height:75px; margin:0; position:absolute; padding:0;  left:149px; top:60px; z-index:2;}
+.news4_2{width:351px; margin:15px 0 0 0; text-align:center;  }
+.news4_2 a{font-size:16px; color:#777;}
+
+
+.news5{ width:950px; height:auto; margin:0 auto; padding:0; overflow:hidden;}
+.news5 ul{ margin:0; padding:0;}
+.news5 ul li{ width:1140px; height:auto; margin:34px 0 0 0; padding:0 0 25px 0; border-bottom:solid 1px #f4f4f4 ; overflow:hidden; list-style-type:none;}
+.news5_1{ width:90px; height:100px; margin: 17px 0px 0px; padding:10px 0 0 0; border-top:solid 4px #ff3a1e; float:left; text-align:center; font-family:Tahoma, Geneva, sans-serif;}
+.news5_2{ width:90px; height:76px; font-size:70px; color:#ccc; line-height:70px; }
+.news5_3{ font-size:20px; color:#ccc; line-height:18px; }
+.news5_4{ width:980px; height:auto; margin:0; padding:0; float:right;}
+.news5_5{ width:720px; height:auto; margin:0; padding:10px 0 15px 0; }
+.news5_5 a{ font-size:32px; color:#222;}
+.news5_5 a:hover{ color:#ff3a1e;}
+.news5_6{ width:980px; height:auto; margin:10px 0 0 0; font-size:14px; color:#777; line-height:24px;}
+.news5_6 p{ font-size:14px; color:#777; width:720px;}
+.news5_7{ width:150px; height:25px; margin:25px 0 0 0; padding:0;}
+.news5_7 a{ font-size:14px; color:#333;}
+.news5_7 a:hover{ color:#ff3a1e;}
+ 
