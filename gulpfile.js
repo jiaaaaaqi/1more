@@ -1,8 +1,4 @@
 var gulp = require("gulp");
-// var concat = require("gulp-concat");
-// var uglify = require("gulp-uglify");
-// var rename = require("gulp-rename");
-
 
 //监听任务
 gulp.task("watch-all",async ()=>{
