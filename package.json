@@ -1,0 +1,26 @@
+{
+  "name": "1more",
+  "version": "1.0.0",
+  "description": "\"模仿1more官网\"",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^4.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiaaaaaqi/1more.git"
+  },
+  "keywords": [
+    "\"1more\""
+  ],
+  "author": "jiaqi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jiaaaaaqi/1more/issues"
+  },
+  "homepage": "https://github.com/jiaaaaaqi/1more#readme"
+}
