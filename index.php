@@ -6,6 +6,7 @@
     <link href="css/index.css" rel="stylesheet" type="text/css" />
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="js/lib/jquery-1.8.1.min.js" type="text/javascript" ></script>
+    
     <style>   
         .videobox{position: fixed;width: 960px;height:580px; z-index: 10000;left: 50%;margin-left: -480px;top: 50%;margin-top: -290px;}
             .video_title{background: #fff; height: 50px; line-height: 50px; padding:0 15px;font-size: 16px;}

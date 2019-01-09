@@ -5,6 +5,7 @@
     <title>万魔声学-会员登录</title>
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/login.css">
+    <script src="js/tools/cookieTools.js"></script>
     <script src="js/lib/jquery-1.8.1.min.js"></script>
     <script src="js/login/login.js"></script>
     <style>
