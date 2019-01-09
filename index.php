@@ -16,13 +16,13 @@
 </head>
 <body>
     <?php
-        include "html/common/header.html"
+        include "html/header.html"
     ?>
     <?php
         include "html/index.html"
     ?>
     <?php
-        include "html/common/footer.html"
+        include "html/footer.html"
     ?>
 </body>
 </html>

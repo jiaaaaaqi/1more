@@ -1,31 +1,3 @@
-//jquery  ajax 封装
-function doAjax(url,data,callBack){
-	$.ajax({ 
-        type:"POST",
-        url: url,
-        data: data,
-        dataType: "html",
-        success: function(data){ 
-        	callBack(data); 
-        }
-    });
-}
-
-function doJsonAjax(url,data,callBack){
-	$.ajax({ 
-        type:"POST",
-        url: url,
-        data: data,
-        dataType: "json",
-        success: function(data){
-        	callBack(data); 
-        },
-        error: function (data){
-        	
-        }
-    });
-}
-
 $(function () {
 	$(".registerform").Validform({
     	btnSubmit:"#checkButton",
@@ -60,6 +32,8 @@ jmz.GetLength = function(str) {
     return realLength;
 };
 
+
+
 var tips = "<font style='color:#F63B21'>用户名至少6个字符,最多12个字符</font>";
 function checkUserName(obj){
 	var name = obj.value;
@@ -76,11 +50,6 @@ function checkUserName(obj){
 		$("#strLoginName").focus();
 		return;
 	}
-	doAjax("../php/checkUser.php","",checkCallback);
-	// else{
-	// 	$("#userspan").html("<font style='color:#A5C11B'>恭喜你，可以使用该用户名！</font>");
-	// }
-
 }
 
 
@@ -113,7 +82,7 @@ function checkPhone(obj){
 		return;
 	}
 	
-	doAjax("../php/checkPhone.php"+"&phone=" + encodeURIComponent(phone), "",checkCallback2);
+	ajax('../php/checkPhone.php','post','','html',checkCallback2);
 }
 function checkCallback2(data) {
 	//成功
