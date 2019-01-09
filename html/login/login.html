@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>万魔声学-会员登录</title>
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/login.css">
-    <script src="js/jquery-1.8.1.min.js"></script>
+    <link rel="stylesheet" href="../../css/index.css">
+    <link rel="stylesheet" href="../../css/login.css">
+    <script src="../../js/lib/jquery-1.8.1.min.js"></script>
     <style>
         .loginBtn {
             width:367px; height:55px; background:#F63B21;
@@ -22,40 +22,44 @@
 </head>
 <body>
     <section>
-        <div class="xbtbs">
-            <div class="xbtb">
-                <div class="xbtb1">
-                    <a href="/index.html">
-                        <img src="images/logo.png">
-                    </a>
-                </div>
-                <div class="xbtb1_0">
-                    <div class="xbtb1_1">
-                        <ul>
-                            <li><a href="index.html">首页</a></li>
-                            <li><a href="/product/listIndex.html">产品</a></li>
-                            <li><a href="/news/newIndex.html">咨询</a></li>
-                            <li><a href="linkageIndex/inkIndex.html">体验店</a></li>
-                            <li><a href="service/serviceIndex.html">服务</a></li>
-                            <li><a href="#">社区</a></li>
-                        </ul>
+        <div class="topjob1">    		
+            <div class="xbtbs">
+                <div class="xbtb">
+                    <div class="xbtb1">
+                        <a href="../../index.html">
+                            <img src="../../images/logo.png" />
+                        </a>
+                        <h1 style="display: none;">1more耳机-万魔声学</h1>
                     </div>
-                    <div class="xbtb1_2" id="islogin">
-                        <div class="xbtb1_3">
-                            <a href="login.html">登录</a>
+                    <div class="xbtb1_0">
+                            <div class="xbtb1_1">
+                            <ul>
+                                <li><a href="../../index.html">首页</a></li>
+                                <li><a href="../product/listIndex.html">产品</a></li>
+                                <li><a href="../news/list.html">资讯</a></li>
+                                <li><a href="##">体验店</a></li>
+                                <li><a href="../service/serviceIndex.html">服务</a></li>
+                                <li><a href="##">社区</a></li>
+                            </ul>
+                        </div>                 
+                        <div class="xbtb1_2" id="islogin">
+                            <div class="xbtb1_3">
+                                <a href="../login/login.html">登录</a>
+                            </div>
+                            <div class="xbtb1_4">
+                                <a href="../register/toRegister.html">注册</a>
+                            </div>
                         </div>
-                        <div class="xbtb1_4">
-                            <a href="toRegister.html">注册</a>
+                        <div class="xbtb1_5">
+                            <a href="../cart/cart.html">购物车</a>
+                            <a href="../cart/cart.html" class="hover" style="color: #ff3a1f;" id="shopNum"></a>
                         </div>
-                    </div>
-                    <div class="xbtb1_5">
-                        <a href="/cart.html">购物车</a>
-                        <a href="/cart.html" class="hover" style="color: #ff3a1f;" id="shopNum"></a>
                     </div>
                 </div>
             </div>
         </div>
-    </section><div class="content_login">
+    </section>
+    <div class="content_login">
         <div class="content_login1">
             <form id="from1" method="post" action="login.php" class="submitForm">
                 <div id="normalLogin">
@@ -72,7 +76,7 @@
                         <a href="/login/forgot.html">忘记密码?</a>
                     </div>
                 </div>
-                <script src="js/cookieTools.js"></script>
+                <script src="../../js/tools/cookieTools.js"></script>
                 <script type="text/javascript">
                     $(function(){		
                         $("#loginBtn").click(function(){
@@ -114,11 +118,12 @@
         </div>
     </div>
     <footer>
+        <footer>
         <div class="foot">
             <div class="foot2">
                 <div class="foot2_1">
                     <a href="javascript:;">
-                        <img src="images/homex_2_04.jpg" alt="">
+                        <img src="../../images/homex_2_04.jpg" alt="">
                     </a>
                 </div>
                 <div class="foot2s_1" style="display: none"></div>
@@ -174,12 +179,36 @@
                             0755-86574095
                         </div>
                         <div class="foot4_3">
-                            <a href="javascript:void(0)" onclick="javascript:window.open('https://vs.rainbowred.com/visitor/pc/chat.html?companyId=499','','width=854,height=600')" style="cursor:hand">在线客服</a>
+                            <a href="##">在线客服</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="bottom" style="text-align: center; padding-bottom: 10px; width: 390px; margin: 0 auto; margin-bottom: 10px; height: 40px;"></div>
+            <div class="bottom" style="text-align: center; padding-bottom: 10px; width: 390px; margin: 0 auto; margin-bottom: 10px; height: 40px;">
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="width: 130px; text-align: center; float:left;">
+                            <span style="margin-bottom: 10px;">
+                                <a href="https://1more.tmall.com" target="_blank" rel="nofollow">
+                                    <img src="../../images/tmall.jpg">
+                                </a>
+                            </span>
+                            <span style="margin-right:10px; line-height: 24px;">
+                                <a href="https://1more.tmall.com" target="_blank" rel="nofollow">1MORE天猫旗舰店</a>
+                            </span> 
+                        </li>
+                        <li style="width: 130px; text-align: center; float:left;">
+                            <span style="margin-bottom: 10px;">
+                                <a href="http://onemoreerji.jd.com/" target="_blank" rel="nofollow">
+                                    <img src="../../images/jd.jpg">
+                                </a>
+                            </span>
+                            <span style="margin-left:10px; line-height: 24px;">
+                                <a href="http://onemoreerji.jd.com/" target="_blank" rel="nofollow">1MORE京东旗舰店
+                                </a>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
             <div class="foot5">
                 <div class="foot5_1">
                     ©2013-2019 万魔声学科技有限公司 版权所有

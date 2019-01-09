@@ -7,24 +7,6 @@ $(document).ready(function () {
     if(callback == "../../html/login/login.html" || callback == "../../html/register/toRegister.html"){
         callback = "../../index.html";
     }
-
-    // $.get("/getlogin.html?callBack="+callback, {
-    //     iddd: Math.random()
-    // },function(data) {
-
-    //     if($(".xbtb1_2").length > 0){
-    //         $(".xbtb1_2").remove();
-    //     }
-
-    //     $(".xbtb1_1").after(data);
-
-    //     $(".top1_8").hover(function () {
-    //         $(".top1_17").show();
-    //     }, function () {
-    //         $(".top1_17").hide();
-    //     });
-    // });
-
 });
 
 
@@ -61,11 +43,4 @@ function jsddm_canceltimer(){
     }
 }
 
-function showuserbg(){
-    $('#u').css("background","#f4f4f4");
-}
-
-function closeuserbg(){
-    $('#u').css("background","");
-}
 document.onclick = jsddm_close;
