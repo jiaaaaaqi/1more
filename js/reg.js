@@ -1,21 +1,3 @@
-$(function () {
-	$(".registerform").Validform({
-    	btnSubmit:"#checkButton",
-		tiptype:2,
-		tipSweep:true,
-		beforeSubmit:function(){
-			if(!zhuche())
-				return;
-			saveUser();
-			return false;
-		}
-	});
-})
-
-//去掉字符串头尾空格
-function trim(str) {
-    return str.replace(/(^\s*)|(\s*$)/g, "");
-}
 //去除字符串右空格
 function rtrim(s) {
     return s.replace(/(\s*$)/, "");
@@ -23,47 +5,73 @@ function rtrim(s) {
 // 获得字符串实际长度
 var jmz = {};
 jmz.GetLength = function(str) {
-    var realLength = 0, len = str.length, charCode = -1;
-    for (var i = 0; i < len; i++) {
-        charCode = str.charCodeAt(i);
-        if (charCode >= 0 && charCode <= 128) realLength += 1;
-        else realLength += 2;
-    }
-    return realLength;
+	var realLength = 0, len = str.length, charCode = -1;
+	for (var i = 0; i < len; i++) {
+		charCode = str.charCodeAt(i);
+		if (charCode >= 0 && charCode <= 128) realLength += 1;
+		else realLength += 2;
+	}
+	return realLength;
 };
-
-
-
-var tips = "<font style='color:#F63B21'>用户名至少6个字符,最多12个字符</font>";
-function checkUserName(obj){
-	var name = obj.value;
-	var len = jmz.GetLength(rtrim(name));
-	var first_chr = name.charAt(0);
-	var patrn=/^[0-9]$/;
-	 if(patrn.exec(first_chr)) 
-		{	  
-		$("#userspan").html("<font style='color:#F63B21'>用户名首字符不能为数字</font>");   
-			  return false;
+//验证是否为手机号
+function checkMobilePhone(phone){
+	var dl = /(^[1][0-9]\d{9}$)/;
+	var tw = /(^[9]\d{9}$)/
+	var strMobilePhone = phone;
+	var length = strMobilePhone.length
+	//大陆手机号码
+	if(length == 11){
+		if(!dl.exec(strMobilePhone)){
+			return false;
 		}
-	 else if(name == "" ||  len<6  || len > 12 ){
-		$("#userspan").html(tips);
-		$("#strLoginName").focus();
-		return;
+	}else{
+		return false;
 	}
+	return true;
 }
 
 
-function checkCallback(data) {
-	//成功
-	if (data == '1') {
-		$("#userspan").html("<font style='color:#A5C11B'>恭喜你，可以使用该用户名！</font>");
-	}
-	//重名
-	else if (data == "0") {
-		$("#userspan").html("<font style='color:#F63B21'>用户名已存在,请更换用户名!</font>");
-	}
+//验证用户名
+	var tips = "<font style='color:#F63B21'>用户名至少6个字符,最多12个字符</font>";
+	function checkUserName(obj){
+		var name = obj.value;
+		var len = jmz.GetLength(rtrim(name));
+		var first_chr = name.charAt(0);
+		var patrn=/^[0-9]$/;
+		if(patrn.exec(first_chr)) 
+			{	  
+			$("#userspan").html("<font style='color:#F63B21'>用户名首字符不能为数字</font>");   
+				return false;
+			}
+		else if(name == "" ||  len<6  || len > 12 ){
+			$("#userspan").html(tips);
+			$("#strLoginName").focus();
+			return;
+		}
+		checkuser(name);
+}
+function checkuser(name){
+	let xhr = new XMLHttpRequest();		
+	//2、设置请求参数
+	xhr.open('get','php/checkUser.php?username='+name,true);
+	//3、设置回调函数
+	xhr.onreadystatechange = function(){
+		if(xhr.readyState==4 && xhr.status==200){
+			//console.log(xhr.resopnseText);
+				if(xhr.responseText=='1'){
+					$("#userspan").html("<font style='color:#A5C11B'>恭喜你，可以使用该用户名！</font>");
+				}else{
+					$("#userspan").html("<font style='color:#F63B21'>用户名已存在,请更换用户名!</font>");
+				}
+			}
+		}
+	xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+	//4、发送
+	xhr.send();
 }
 
+
+//验证手机号
 var tipsa = "<font style='color:#F63B21'>手机号长度为11个字符</font>";
 function checkPhone(obj){
 	var phone = obj.value;
@@ -81,21 +89,30 @@ function checkPhone(obj){
 		$("#strMobilePhone").focus();
 		return;
 	}
-	
-	ajax('../php/checkPhone.php','post','','html',checkCallback2);
+	checkPhoneNumber(phone);
 }
-function checkCallback2(data) {
-	//成功
-	if (data == '1') {
-		$("#phonespan").html("<font style='color:#A5C11B'>恭喜你，可以使用该手机号！</font>");
-	}
-	//重名
-	else if (data == "0") {
-		$("#phonespan").html("<font style='color:#F63B21'>手机号已存在,请更换手机号!</font>");
-	} else {
-	}
+function checkPhoneNumber(phone){
+	let xhr = new XMLHttpRequest();		
+	//2、设置请求参数
+	xhr.open('get','php/checkPhone.php?phone='+phone,true);
+	//3、设置回调函数
+	xhr.onreadystatechange = function(){
+		if(xhr.readyState==4 && xhr.status==200){
+			console.log(xhr.resopnseText);
+				if(xhr.responseText=='1'){
+					$("#phonespan").html("<font style='color:#A5C11B'>恭喜你，可以使用该手机号！</font>");
+				}else{
+					$("#phonespan").html("<font style='color:#F63B21'>手机号已存在,请更换手机号!</font>");
+				}
+			}
+		}
+	xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+	//4、发送
+	xhr.send();
 }
 
+
+//验证密码
 function ckPwd1(obj) { 
 	var userpwd = obj.value;
 	var len = jmz.GetLength(rtrim(userpwd));
@@ -107,8 +124,7 @@ function ckPwd1(obj) {
         return true;  
     }  
 }
-
-
+//验证确认密码
 function ckPwd2(obj) {
 	var userpwd = $('#userpwd').val();
 	var userrpwd = $('#userrpwd').val();
@@ -125,98 +141,18 @@ function ckPwd2(obj) {
     }  
 } 
 
-function zhuche() {
-    var str_phone = window.document.getElementById("strMobilePhone").value;
-
-    var str_pass = window.document.getElementById("userpwd").value;
-    var str_pass1 = window.document.getElementById("userrpwd").value;
-    var yzcode = window.document.getElementById("strCode").value;
-   
-    if (rtrim(str_phone) == "") {
-        jBox.tip("请输入您的手机!");
-        $("#strMobilePhone").focus();
-        return false;
-    }
-    if (!isCellPhoneNum(str_phone)) {
-        jBox.tip("请填写正确的手机!");
-        $("#strMobilePhone").focus();
-        return false;
-    }
-
-
-    if (rtrim(str_pass) == "") {
-        jBox.tip("请输入您的密码!");
-        $("#userpwd").focus();
-        return false;
-    }
-    
-    if (str_pass.length < 6 || str_pass.length > 16) {
-        jBox.tip("密码长度为6-16个字符，区分大小写!");
-        $("#userrpwd").focus();
-        return false;
-    }
-
-
-    if (rtrim(str_pass1) == "") {
-        jBox.tip("请输入您的确认密码!");
-        $("#userrpwd").focus();
-        return false;
-    }
-    if (str_pass1 != str_pass) {
-        jBox.tip("两次输入的密码不一致!");
-        $("#userpwd").focus();
-        return false;
-    }
-
-    if (rtrim(yzcode) == "") {
-        jBox.tip("请输入验证码!");
-        $("#strCode").focus();
-        return false;
-    }
-    return true;
-}
-
-function saveUser(){
-	$("#form1").ajaxSubmit(function(data) {
-		var object = eval("("+data+")");
-		if(object.ret=="success"){
-			jBox.prompt('注册成功', '提示', 'info', { closed: function () 
-                { if(object.callback == ""){
-    				redirect("../index.php");
-    			}
-    			else{
-    				redirect(object.callback);
-    			}} });
-			
-		}else{
-			$("#reg_token").val(object.token);
-			jBox.tip(object.info);
-		}
-    });
-}
-
-
-function checkMobilePhone(phone){
-	var dl = /^1[3|4|5|7|8|9]\d{9}$/;  
-	var strMobilePhone = phone;
-	var length = strMobilePhone.length
-	//大陆手机号码
-	if(length == 11){
-		if(!dl.exec(strMobilePhone)){
-			return false;
-		}
-	}else{
-		return false;
-	}
-	return true;
-}
-
-
-// function refreshImage(img){
-//     var imageUrl = '/register/getddddValidImage.do';
-//     img.src = imageUrl + '?id=' + Math.random();
-// }
-
-function checkReg(){
-	return false;
-}
+$(function(){
+	$("#submitbutton").click(function(){
+		$.post(
+            "php/saveuser.php",
+            {
+                "username":$("#strLoginName").val(),
+                "password":$("#userpwd").val(),
+                "phone":$("#strMobilePhone").val()
+            },
+            function(data){					
+                location.href="login.php";
+            }
+        );
+	});
+});

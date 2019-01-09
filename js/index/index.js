@@ -21,39 +21,3 @@ $(function () {
 
 });
 /**头部栏目切换***/
-
-
-/**banner效果***/
-
-//PC端加载
-function ladong() {
-	$(".logo3").show();
-	$(".logo4").show();
-	
-	$("#body_list").empty();
-	for(var i=0;i<arrayImgBanner.length;i++){
-		$("#body_list").append(arrayImgBanner[i]);
-	}
-	var s;
-}
-//PC端加载
-window.onload = function () {
-	ladong();
-}
-//PC端窗口上下拉动
-window.onresize = function () {
-    ladong();
-    $(".top").each(function () {
-        var tupian = $("#banner > ul > li:eq(0) > a > img"); var kuan = tupian.width(); var gao = tupian.height();
-        var h1 = body_kuan() * gao / kuan
-        if (h1 >= body_gao()) { h1 = body_gao(); }
-        if (h1 == 0) {
-            h1 = body_gao();
-        }
-        $(this).css("height", h1 * 1); $(this).css("overflow", "hidden");
-
-    });
-
-}
-
-/**banner效果***/

@@ -14,11 +14,9 @@ section{ width:100%; background:#fff;overflow: hidden;}
 /* login */
 .content_login{ width:100%; background:#fff;overflow: hidden;}
 .content_login1{ width:370px; margin:100px  auto 230px;overflow: hidden;}
-.content_login2{ width:100%; height:65px;}
 .content_login3{ width:100%; margin:0 0 31px 0; height:58px;}
 .content_login3 input{width:98% ; padding:14px 0 14px 0; height:22px; line-height:22px; color:#555; font-size:16px; text-indent:2em;border: 1px solid #eee;}
 .content_login4{ width:100%; margin:0px 0 10px 1px;float: left;}
-/***.content_login4 a{width:365px; height:55px;line-height:55px; font-size:18px; color:#fff; display:block; background:#303030; text-align:center; }***/
 .content_login4 a{width:365px; height:55px;line-height:55px; font-size:18px; color:#fff; display:block; background:#f63b21; text-align:center; }
 .content_login5{ width:97%; float:left; margin:15px 0 0 0;}
 .content_login5_1{float:right;}
@@ -29,11 +27,5 @@ section{ width:100%; background:#fff;overflow: hidden;}
 .content_login6_2{float:left; margin:0 0 40px 10px; color:#414141; font-size:14px;}
 .content_login6_3{float:right; }
 .content_login6_3 a{color:#424242; font-size:12px;}
-.content_login7{ width:97%; float:left; margin:37px 0 0 0; }
-.content_login7_1{color:#707070;font-size:12px; float:left;}
-.content_login7_2{color:#707070;font-size:12px; float:right; margin:0 5px 0 5px;}
-.content_login8{ width:98%; text-align:right;margin:0 0 10px 0;}
-.content_login8 a{font-size: 16px; color:#666; }
-.content_login8 a:hover{color:#ff3a1e ; }
 .content_login3 .codeTit { width: 75px;height: 30px; line-height: 30px; text-align: right; font-size: 14px;color: #f63b21; margin-top: 11px;
 }

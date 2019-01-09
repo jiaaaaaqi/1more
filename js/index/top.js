@@ -1,7 +1,6 @@
 
 $(function () {
 
-
     $(".top5 > ul > li:eq(0) > a").hover(function (){
         $(this).find("img").attr("src","/images/tt1.png");
     }, function () {
