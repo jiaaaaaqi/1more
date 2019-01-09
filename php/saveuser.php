@@ -1,5 +1,4 @@
 <?php
-	
 	header("content-type","text/html;charset=utf-8");
 	
 	//一、接收前端传来的数据

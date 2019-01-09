@@ -1,0 +1,67 @@
+<script>
+        $(function(){
+            $('.video_close').click(function(){
+                $('.videobox,.video_ih').remove()
+            })
+        })
+</script>
+<div class="videobox" >
+    <div class="video_title"><span class="video_close">×</span>我是周杰伦，我是1MORE</div>
+    <div style="background: #000">
+        <video width="960px" height="580" controls  autoplay >
+            <source src="video/jay-p-20181211.mp4" type="video/mp4">
+        </video>
+    </div>
+</div>
+<div class="video_ih"></div>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+    </ol>
+    <div class="carousel-inner" id="body_list">
+    
+    </div>
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon-chevron-left"><img src="https://static0.1more.com/s/images/sprite.png"></span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon-chevron-right"><img src="https://static0.1more.com/s/images/sprite11.png"></span>
+    </a>
+</div>  
+<section>
+    <div class="content_index">
+        <ul>
+            <li class="li"><a href="##"><img src="images/index_section/sec_img01.jpg" alt="1MORE三单元圈铁蓝牙耳机"></a></li>
+            <li class="li"><a href="##"><img src="images/index_section/sec_img02.jpg" alt="1MORE Stylish 双动圈颈挂式蓝牙耳机"></a></li>
+            <li class="li"><a href="##"><img src="images/index_section/sec_img03.jpg" alt="1MORE iBFree Sport 智能蓝牙耳机"></a></li>
+            <li class="li"><a href="##"><img src="images/index_section/sec_img04.jpg" alt="1MORE Spearhead VRX电竞头戴式耳机"></a></li>
+        </ul>
+    </div>
+</section>
+<script type="text/javascript" src="js/index/switchImage.js"></script>
+<script type="text/javascript" src="js/common/header.js"></script>
+<script type="text/javascript" src="js/index/cart.js"></script>
+<script type="text/javascript" src="js/index/top.js"></script>
+<script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/index/index.js"></script>
+<script>
+    var arrayImgBanner = [];//创建数组，放轮播图
+    var firstBanner;
+                firstBanner = "<div class='item active'>";
+                firstBanner += "	<a href='##' target='_blank'><img src='images/carousel/carousel05.jpg' alt='1MORE Stylish 双动圈颈挂式蓝牙耳机' style='width: 100%'></a>";
+                firstBanner += "	<div class='container'></div>";
+                firstBanner += "</div>";
+    
+                arrayImgBanner.push("<div class='item active'><a href='##' target='_blank'><img src='images/carousel/carousel05.jpg' alt='1MORE Stylish 双动圈颈挂式蓝牙耳机' style='width: 100%'></a><div class='container'></div></div>");
+                arrayImgBanner.push("<div class='item'><a href='##'><img src='images/carousel/carousel04.jpg' alt='1MORE Spearhead VR BT 电竞蓝牙耳机' style='width: 100%'></a><div class='container'></div></div>");
+                arrayImgBanner.push("<div class='item'><a href='##'><img src='images/carousel/carousel03.jpg' alt='1MORE Spearhead VRX 电竞头戴式耳机' style='width: 100%'></a><div class='container'></div></div>");
+                arrayImgBanner.push("<div class='item'><a href='##'><img src='images/carousel/carousel02.jpg' alt='1MORE三单元圈铁蓝牙耳机' style='width: 100%'></a><div class='container'></div></div>");
+                arrayImgBanner.push("<div class='item'><a href='##'><img src='images/carousel/carousel01.jpg' alt='1MORE高清降噪圈铁蓝牙耳机' style='width: 100%'></a><div class='container'></div></div>");
+    
+    $("#body_list").append(firstBanner);
+    </script>

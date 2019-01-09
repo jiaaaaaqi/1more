@@ -1,0 +1,56 @@
+<div class="content_login1">
+    <form id="from1" method="post" action="login.php" class="submitForm">
+        <div id="normalLogin">
+            <div class="content_login3">
+                <input name="vipName" id="strLoginName" type="text"  placeholder="用户名" maxLength="20"/>
+            </div>
+
+            <div class="content_login3">
+                <input name="strPassword" id="strPassword" type="password"  placeholder="密码" maxLength="16"/>
+            </div>
+        </div>
+        <div class="content_login6">
+            <div class="content_login6_3">
+                <a href="##">忘记密码?</a>
+            </div>
+        </div>
+        <script src="../../js/tools/cookieTools.js"></script>
+        <script type="text/javascript">
+            $(function(){		
+                $("#loginBtn").click(function(){
+                    //1、
+                    console.log("hello");
+                    $.post(
+                        "login.php",
+                        {
+                            "userId":$("#strLoginName").val(),
+                            "userPass":$("#strPassword").val(),
+                        },
+                        function(data){					
+                            if(data=="1"){//登录成功！
+                                //记录cookie
+                                console.log("good!");
+                                saveCookie("userId",$("#strLoginName").val(),7);
+                                location.href="index.html";
+                            }else{
+                                alert("登录失败，用户名或者密码不对！");
+                            }
+                        }
+                    );
+                });
+            });
+            
+        </script>
+        <div class="content_login4">
+            <input name="" type="button" value="登&nbsp;录" class="loginBtn" id="loginBtn" />
+        </div>
+    </form>
+    <div class="content_login5">
+        <div class="content_login5_1">
+            <a href="javascript:void(0)" onclick="toRegister()">立即注册</a>
+        </div>
+        <div class="content_login5_2">
+            没有1More帐号？
+        </div>
+    </div>
+</div>
