@@ -1,13 +1,8 @@
  var isok = true;
-
- 
-
 (function () {
     /**
     * 切换图片
-    * code by zhaoyu at 2011.8.16
-    */
-	
+    */	
     if (typeof switchImage == 'undefined') switchImage = {};
     switchImage = function () { }
     switchImage.prototype = {
@@ -20,8 +15,6 @@
         current_class: 'barh', 		//标题按钮当前选中标题样式
         normal_class: '', 		//标题按钮普通状态标题样式
         init: function () {
-
-
 
             //初始化数据
             var supper = this, i = 0;
@@ -41,8 +34,7 @@
                 });
                 i++;
             });
-			
-			
+						
 		    $(".logo3").click(function () {
 				
                  var num = $("#bannerbar").find("a[class='barh']").attr("num");
