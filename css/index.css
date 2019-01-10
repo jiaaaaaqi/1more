@@ -23,6 +23,13 @@ img {
 	border:0;
 }
 body{ margin:0; padding:0; width:100%;background-color:#e6e6e6 ; min-width:400px;} 
+
+.videobox{position: fixed;width: 960px;height:580px; z-index: 10000;left: 50%;margin-left: -480px;top: 50%;margin-top: -290px;}
+.video_title{background: #fff; height: 50px; line-height: 50px; padding:0 15px;font-size: 16px;}
+.video_title span.video_close{float: right;font-size:32px; color: #999;line-height: 46px; cursor: pointer}
+.video_title span.video_close:hover{color: #5c5c5c}
+.video_ih{position: fixed; left:0;top: 0;right: 0;bottom: 0;background:rgba(0,0,0,0.5); z-index: 9999}
+
 .topjob{ position:relative;width: auto;height: 80px;padding: 0px;background: none repeat scroll 0% 0% #232323;}
 .topjob1{ position:relative;width: auto;height: auto;padding: 0px;background: none repeat scroll 0% 0% #232323;}
 .top{ width:auto; height:auto; padding:0;position:relative; background-color:#2A2A2F;}
@@ -95,7 +102,6 @@ body{ margin:0; padding:0; width:100%;background-color:#e6e6e6 ; min-width:400px
 .top2 ul li a{color:#fff; font-size:26px;}
 .top2 ul li a.hover{color:#ff3a1e; font-size:26px;}
 .top2 ul li a:hover{color:#ff3a1e; font-size:26px;}
-
 
 .top3{position:absolute; width:170px; right:140px; top:500px;}
 .top4{ height:25px;color:#fff; font-size:12px;}

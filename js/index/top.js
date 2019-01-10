@@ -1,6 +1,7 @@
 
 $(function () {
 
+    /***����������ȥ***/
     $(".top5 > ul > li:eq(0) > a").hover(function (){
         $(this).find("img").attr("src","/images/tt1.png");
     }, function () {
@@ -21,14 +22,20 @@ $(function () {
     }, function () {
         $(this).find("img").attr("src","/images/home7_2_03-21.jpg");
     });
+    /***����������ȥ***/
 
+
+
+    /***�ײ������ע***/
     $(".foot2_1").hover(function () {
         $(".foot2s_1").show();
     }, function () {
         $(".foot2s_1").hide();
     });
+    /***�ײ������ע***/
 
 
+    /***��Ա��¼�ɹ������ŵ����ﳵ***/
     $(".top1_16").hover(function () {
         $(".top1_10").show();
     }, function () {
@@ -46,5 +53,7 @@ $(function () {
     }, function () {
         $(".top1_10N").hide();
     });
+    /***��Ա��¼�ɹ������ŵ����ﳵ***/
 });
-
+		
+  
