@@ -28,10 +28,8 @@ ul.nav-main{
     list-style-type: none;
 }
 ul.nav-main span{
-    display: inline-block;
-    
+    display: inline-block;  
 	margin-top:14px;
-	float:right;
     width: 12px;
     height: 8px;
     background: url('../images/down-icon.png') no-repeat right;
@@ -115,7 +113,6 @@ div.hidden-box{
 	width: 160px;
 	height: 40px;
 	position: relative;
-	vertical-align: middle
 }
 .footerbtm .main_tar {
 	position: absolute;
@@ -170,12 +167,3 @@ div.hidden-box{
 .footerbtm .select:hover .main_content {
 	display: block
 }
-
-
-
-
-
-
-
-
-

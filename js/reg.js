@@ -57,7 +57,8 @@ function checkuser(name){
 	//3、设置回调函数
 	xhr.onreadystatechange = function(){
 		if(xhr.readyState==4 && xhr.status==200){
-			//console.log(xhr.resopnseText);
+			
+			console.log(xhr.resopnseText);
 				if(xhr.responseText=='1'){
 					$("#userspan").html("<font style='color:#A5C11B'>恭喜你，可以使用该用户名！</font>");
 				}else{

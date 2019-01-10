@@ -25,7 +25,6 @@
 <script type="text/javascript" src="js/index/switchImage.js"></script>
 <script type="text/javascript" src="js/common/header.js"></script>
 <!-- <script type="text/javascript" src="js/cart.js"></script> -->
-<script type="text/javascript" src="js/index/top.js"></script>
 <script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
     <?php
         include "html/index.html"
