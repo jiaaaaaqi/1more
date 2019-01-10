@@ -22,8 +22,6 @@ $(function () {
         $(this).find("img").attr("src","/images/home7_2_03-21.jpg");
     });
 
-
-
     $(".foot2_1").hover(function () {
         $(".foot2s_1").show();
     }, function () {

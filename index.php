@@ -6,9 +6,14 @@
     <link href="css/index.css" rel="stylesheet" type="text/css" />
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="js/lib/jquery-1.8.1.min.js" type="text/javascript" ></script>
-    
+    <script type="text/javascript" src="js/index/switchImage.js"></script>
+    <script type="text/javascript" src="js/common/header.js"></script>
+    <script type="text/javascript" src="js/index/cart.js"></script>
+    <script type="text/javascript" src="js/index/top.js"></script>
+    <script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/index/index.js"></script>
     <style>   
-        .videobox{position: fixed;width: 960px;height:580px; z-index: 10000;left: 50%;margin-left: -480px;top: 50%;margin-top: -290px;}
+            .videobox{position: fixed;width: 960px;height:580px; z-index: 10000;left: 50%;margin-left: -480px;top: 50%;margin-top: -290px;}
             .video_title{background: #fff; height: 50px; line-height: 50px; padding:0 15px;font-size: 16px;}
             .video_title span.video_close{float: right;font-size:32px; color: #999;line-height: 46px; cursor: pointer}
             .video_title span.video_close:hover{color: #5c5c5c}

@@ -19,7 +19,6 @@ a {
 .btn-small {height: 28px;line-height: 28px;width:118px;font-size: 14px;}
 .btn-primary {background:#FF3A1E; border-color:#FF3A1E;color:#FFF;}
  
-
 img {
 	border:0;
 }
@@ -59,9 +58,7 @@ body{ margin:0; padding:0; width:100%;background-color:#e6e6e6 ; min-width:400px
 .top1_12{ width:100%; height:42px; line-height:42px; color:#d4d4d4; font-size:14px; margin:0 0 0 20px;}
 .top1_13{ width:100%; height:auto;}
 .top1_13 ul{margin:0;  padding:0;}
-
 .top1_13 ul li{margin:0;  padding:0 0 20px 0;list-style-type:none;height:auto; overflow:hidden; width:100%;border-bottom:1px solid #5e5e63;  }
-
 .top1_13_1{ float:left; margin:20px 0 0 5px;}
 .top1_13_1 img{width:65px; height:65px;}
 .top1_13_2{ float:left;color:#fff; margin:40px 0 0 10px; width:120px;}
@@ -85,14 +82,12 @@ body{ margin:0; padding:0; width:100%;background-color:#e6e6e6 ; min-width:400px
 .top1_17 ul li:hover{ background:#222;}
 .top1_17 ul li a{ color:#fff; font-size:12px;}
 .top1_17 ul li a:hover{ color:#fff !important}
-
 .top2s{height:315px; margin:65px 0 0 75px;}
 .top2s ul{ margin:0;  padding:0;}
 .top2s ul li{margin:0;padding:0;list-style-type:none; float:left ; height:70px; width:250px;}
 .top2s ul li a{color:#fff; font-size:28px;}
 .top2s ul li a.hover{color:#ff3a1e; font-size:28px;}
 .top2s ul li a:hover{color:#ff3a1e; font-size:28px;}
-
 
 .top2{width:170px; position:absolute; right:140px; top:130px;}
 .top2 ul{ margin:0;  padding:0;}
@@ -160,7 +155,6 @@ body{ margin:0; padding:0; width:100%;background-color:#e6e6e6 ; min-width:400px
     z-index:-999; 
     }
 
-
 .pr2_12{padding: 20px 0 20px 0; height:40px;}
 .pr2_12_1{float:left;}
 .pr2_12_2{float:left; margin:6px 0 0 30px;}
@@ -171,18 +165,13 @@ body{ margin:0; padding:0; width:100%;background-color:#e6e6e6 ; min-width:400px
 .pr2_12_6{ float:left; margin:5px 0 0 15px;}
 .pr2_12_6 a{ display:block; color:#fff; font-size:14px; width:50px; height:30px; text-align:center; line-height:30px; background:#FF3A1E;}
 .pr2_12 ul { margin: 0px;padding: 0px;}
-.pr2_12 ul li {width: auto;height: 36px; margin: 0px;line-height: 18px;
-    padding: 0px 0px 0px 5px;list-style-type: none; float: left;}
+.pr2_12 ul li {width: auto;height: 36px; margin: 0px;line-height: 18px; padding: 0px 0px 0px 5px;list-style-type: none; float: left;}
 .pr2_12 ul li a {width: auto;height: 27px;margin: 0px;font-family:Arial,Helvetica,sans-serif;font-weight: 600;padding: 9px 15px 0px; font-size: 14px;display: block;background: none repeat scroll 0% 0% #ECECEC;color: #777;}
 .pr2_12 ul li .hover {color: #FFF;background: none repeat scroll 0% 0% #ff3a1e;}
 .pr2_12 ul li a:hover {color: #FFF;background: none repeat scroll 0% 0% #ff3a1e;}
 
- 
-
 .nolist{ margin:50px 0 0 0; color:#777; text-align:center; font-size:16px;}
 .nolist span a{font-size:14px; color:#4E4E4E;} 
-
-
 
 .xbtbs{width:100%; height:80px; background: url(../images/navbg.jpg) repeat-x;}
 .new-header{width:100%; height:80px; background: url(../images/navbg.jpg) repeat-x;}
