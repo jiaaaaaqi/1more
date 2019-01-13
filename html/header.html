@@ -49,7 +49,7 @@
  window.onload = function(){
     var username = getCookie('username');
     console.log(username);
-	if(username!=null){
+	if(username){
         $("#_islogin").css('display', 'block');
         $("#_nologin").css('display', 'none');
 		$("#uname").html(username);

@@ -89,7 +89,7 @@ body{ margin:0; padding:0; width:100%;background-color:#e6e6e6 ; min-width:400px
 .top1_16{width:70px; height:30px;  float:left;margin:0 50px 0 0;}
 .top1_16 a{color:#c7c5c5; font-size:14px;}
 .top1_16 a.hover{color:red; font-size:12px; font-weight:bold;}
-.top1_17{ width:80px; left:0; top:17px; position:absolute; background:#3F3F44; z-index:9999; display:none;}
+.top1_17{ width:80px; left:0; top:17px; position:absolute; background:#3F3F44; z-index:9999;display: none;}
 .top1_17 ul{margin:0;  padding:0;}
 .top1_17 ul li{padding:10px 0 5px 0; width:80px;list-style-type:none;height:20px; text-align:center;}
 .top1_17 ul li:hover{ background:#222;}
@@ -229,6 +229,7 @@ body{ margin:0; padding:0; width:100%;background-color:#e6e6e6 ; min-width:400px
 .xbtb2{ width:50px; height:42px; margin:0; padding:14px 5% 0 0; float:right; display:none; }
 #_islogin .xbtb1_3{ width:80px; height:17px;border-right: 0; position:relative;}
 #_islogin  a{ white-space:nowrap; height:17px;overflow:hidden;text-overflow:ellipsis;   width:80px;  display:block;}
+#_islogin:hover .top1_17{display: block;}
  .top1_10N{background:#3f3f44; left:-255px; top:25px; height:auto; width:377px;position:absolute;z-index: 9999; display:none;}
  .xbtb4{ margin:10px 10px 0  30px;}
  
