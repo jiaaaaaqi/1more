@@ -29,7 +29,7 @@
             <div class="xbtb1_2" id="_islogin">
                 <div class="xbtb1_3 top1_8">
                     <a href="##" id="uname"></a>
-                    <div class="top1_17" style="display: none;">
+                    <div class="top1_17">
                         <ul>
                             <li><a href="##">会员中心</a></li>
                             <li><a href="##">我的订单</a></li>
@@ -46,19 +46,19 @@
     </div>
 </div>
 <script>
-    function showusername(){
+ window.onload = function(){
     var username = getCookie('username');
     console.log(username);
 	if(username!=null){
         $("#_islogin").css('display', 'block');
-       // $("#_nologin").css('display', 'none');
+        $("#_nologin").css('display', 'none');
 		$("#uname").html(username);
 	}else{
         $("#_nologin").css('display', 'block');
-        //$("#_islogin").css('display', 'none');
+        $("#_islogin").css('display', 'none');
 	}
 }	
-    showusername();
+    
 
 $("#exitlogin").click(function(){
         removeCookie('username');

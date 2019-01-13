@@ -14,33 +14,6 @@
                 <a href="##">忘记密码?</a>
             </div>
         </div>
-        <script src="../../js/tools/cookieTools.js"></script>
-        <script type="text/javascript">
-            $(function(){		
-                $("#loginBtn").click(function(){
-                    //1、
-                    console.log("hello");
-                    $.post(
-                        "login.php",
-                        {
-                            "userId":$("#strLoginName").val(),
-                            "userPass":$("#strPassword").val(),
-                        },
-                        function(data){					
-                            if(data=="1"){//登录成功！
-                                //记录cookie
-                                console.log("good!");
-                                saveCookie("userId",$("#strLoginName").val(),7);
-                                location.href="index.html";
-                            }else{
-                                alert("登录失败，用户名或者密码不对！");
-                            }
-                        }
-                    );
-                });
-            });
-            
-        </script>
         <div class="content_login4">
             <input name="" type="button" value="登&nbsp;录" class="loginBtn" id="loginBtn" />
         </div>
