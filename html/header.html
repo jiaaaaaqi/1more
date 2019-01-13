@@ -11,7 +11,7 @@
             <div class="xbtb1_1">
                 <ul>
                     <li><a href="index.php">首页</a></li>
-                    <li><a href="html/product/listIndex.html">产品</a></li>
+                    <li><a href="product.php">产品</a></li>
                     <li><a href="html/news/list.html">资讯</a></li>
                     <li><a href="##">体验店</a></li>
                     <li><a href="html/service/serviceIndex.html">服务</a></li>
@@ -48,7 +48,6 @@
 <script>
  window.onload = function(){
     var username = getCookie('username');
-    console.log(username);
 	if(username){
         $("#_islogin").css('display', 'block');
         $("#_nologin").css('display', 'none');
